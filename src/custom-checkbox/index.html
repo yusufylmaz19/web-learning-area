@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background-color: black;
+    }
+
+    .container{
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+
+    .checkbox-container label{
+      cursor: pointer;
+      display: flex;
+      color: white;
+      opacity: 0.3;
+      transition: opacity 350ms ease-in-out;
+    
+    }
+
+    .checkbox-container input[type="checkbox"]{
+      cursor: pointer;
+      opacity: 0;
+      position: absolute;
+    }
+
+    .checkbox-container label::before{
+      content: '';
+      width: 1em;
+      height: 1em;
+      border: .05em solid black;
+      border-radius: .15em;
+      margin-right: .5em;
+    }
+
+
+    .checkbox-container label:hover::before,
+    .checkbox-container input[type="checkbox"]:hover +label::before {
+     background-color: #35E07D;
+    }
+
+    .checkbox-container input[type="checkbox"]:focus +label::before{
+      box-shadow: 0 0 20px white ;
+    }
+
+    .checkbox-container input[type="checkbox"]:checked +label::before {
+     content: '\002714';
+      background-color: #27AE60;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     color: white;
+    }
+    .checkbox-container input[type="checkbox"]:checked +label
+     {
+    opacity: 1;
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+  <div class="checkbox-container">
+    <input type="checkbox" id="cb1">
+    <label for="cb1">Checkbox 1</label>
+  </div>
+  <br>
+  <div class="checkbox-container">
+    <input type="checkbox" id="cb2">
+    <label for="cb2">Checkbox 2</label>
+  </div>
+  <br>
+  <div class="checkbox-container">
+    <input type="checkbox" id="cb3">
+    <label for="cb3">Checkbox 3</label>
+  </div>
+</div>
+</body>
+
+</html>

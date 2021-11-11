@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .spinner {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 300px;
+      height: 300px;
+    }
+
+    .spinner-sector {
+      border-radius: 50%;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 15px solid transparent;
+      mix-blend-mode: overlay;
+    }
+
+    .spinner-sector-blue {
+      border-top: 15px solid lightblue;
+      animation: rotate 2s ease-out infinite;
+    }
+
+    .spinner-sector-red {
+      border-top: 15px solid lightcoral;
+      animation: rotate 2.5s ease-in infinite;
+    }
+
+    .spinner-sector-green {
+      border-top: 15px solid lightgreen;
+      animation: rotate 1.5s ease-in-out infinite;
+    }
+
+    .spinner-text {
+ font-size: 2em;
+ animation: loading-opacity 3s ease-in-out infinite ;
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes loading-opacity {
+      0%,100%{opacity: 1;}
+      25%,75%{opacity: .5;}
+      50%{opacity: .1;}
+       
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="spinner">
+    <div class="spinner-text">Loading</div>
+    <div class="spinner-sector spinner-sector-red"></div>
+    <div class="spinner-sector spinner-sector-blue"></div>
+    <div class="spinner-sector spinner-sector-green"></div>
+  </div>
+
+</body>
+
+</html>
