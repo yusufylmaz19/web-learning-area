@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Build your own hamburger</title>
+</head>
+<style>
+  body {
+    background: #212121;
+    display: grid;
+    place-items: center;
+    color: cornsilk;
+  }
+
+  .hamburger {
+    width: 500px;
+    height: 300px;
+    margin-top: 0;
+
+  }
+
+  .toppings {
+    margin-top: 0;
+    font-size: 1rem;
+  }
+
+  .seed {
+    fill: white
+  }
+
+  .removed {
+    display: none;
+  }
+  
+  .ketchup{
+    fill: aqua;
+  }
+</style>
+
+<body>
+  <h1>Buil your own hamburger</h1>
+  <svg class="hamburger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.9 163.89">
+
+    <g class="patty">
+      <path class="patty__burger"
+        d="M24.58 67h323.63a21.39 21.39 0 0121.39 21.37v16.44a20 20 0 01-20 20h-325a20 20 0 01-20-20V87a20 20 0 0120-20z"
+        fill="#633a1d" />
+    </g>
+    <g class="cheese">
+      <path class="chesse__drips"
+        d="M352.39 67.03H20.67a13.26 13.26 0 00-6.07 1.5l-.42.22-.67.41a19.22 19.22 0 00-7.43 9.74v.29a24.56 24.56 0 00-1.49 8.44v15.23c0 .78 0 1.54.12 2.3a7 7 0 005.63 3.07c4.27 0 7.75-4.37 7.76-9.75V94.7c0-2.82 1.83-5.11 4.07-5.11h7.31c1.74 0 3.15 1.76 3.14 3.95v1c0 5.38 3.46 9.73 7.74 9.72h.36c1.1 4.35 4.56 7.36 8.5 6.66s6.63-5.06 6.64-10V89.49h17.43v1.31c0 4.87 2.74 9.23 6.58 9.91 4.79.86 8.91-3.8 8.92-9.65v-1.61l22.28-.05v11.74c0 5.37 3.45 9.72 7.73 9.71s7.76-4.37 7.77-9.75V90.67a1.46 1.46 0 011.28-1.59l30.77.14a1.46 1.46 0 011.27 1.6v6.77c0 5.37 3.46 9.72 7.74 9.71h.28c1.28 3.13 3.88 5.27 6.88 5.27 3.61 0 6.64-3.13 7.51-7.34h.25c4.28 0 7.75-4.38 7.76-9.75l.15-4.78a1.46 1.46 0 011.28-1.55l16.12-.1a.76.76 0 01.86.69v7.11c0 4.88 2.74 9.23 6.59 9.92 4.79.85 8.9-3.81 8.91-9.66v-6.54a1.38 1.38 0 011.2-1.5h8.63a1.46 1.46 0 011.34 1.22c1.15 4.65 3 7.89 6.83 7.88s6.78-3.25 7.56-7.59a1.77 1.77 0 011.6-1.56H271s0 .12.14.36a12.49 12.49 0 01.68 2.74l.24 2.68c0 4.49 2.31 8.61 5.77 9.72a6.16 6.16 0 004.18-.1c1.21 4.19 4.63 7 8.5 6.28s6.53-5.08 6.53-9.92V90.57a1.49 1.49 0 011.28-1.62h13.37a1.56 1.56 0 011.36 1.71v6c0 5.18 3.1 9.7 7.22 10 4.51.36 8.27-4.14 8.28-9.73v-6.77a2.06 2.06 0 011.77-1.25l23.74-.23v6.16c0 4.88 2.74 9.24 6.59 9.92 4.78.86 8.9-3.8 8.91-9.65v-6.46c0-12-7.69-21.62-17.17-21.62z"
+        fill="#e8ae00" />
+    </g>
+    <g class="ketchup">
+      <rect class="ketchup__drip" x="38.02" y="69.32" width="10.75" height="27.03" rx="5.37" fill="#b82814" />
+      <rect class="ketchup__drip" data-name="ketchup__drip" x="84.15" y="65.91" width="10.75" height="25.67" rx="5.37"
+        fill="#b82814" />
+      <rect class="ketchup__drip" data-name="ketchup__drip" x="131.29" y="74.1" width="10.23" height="17.48" rx="5.12"
+        fill="#b82814" />
+      <rect class="ketchup__drip" data-name="ketchup__drip" x="124.54" y="69.11" width="10.23" height="26.1" rx="5.12"
+        fill="#b82814" />
+      <rect class="ketchup__drip" data-name="ketchup__drip" x="168.17" y="69.11" width="10.23" height="24.93" rx="5.12"
+        fill="#b82814" />
+      <rect class="ketchup__drip" data-name="ketchup__drip" x="236.04" y="69.11" width="10.23" height="19.98" rx="5.12"
+        fill="#b82814" />
+      <rect class="ketchup__drip" data-name="ketchup__drip" x="215.48" y="77.75" width="10.23" height="18.59" rx="5.12"
+        fill="#b82814" />
+      <rect class="ketchup__drip" data-name="ketchup__drip" x="277.84" y="66.93" width="10.23" height="29.3" rx="5.12"
+        fill="#b82814" />
+      <rect class="ketchup__drip" data-name="ketchup__drip" x="322.7" y="68.77" width="10.23" height="26.43" rx="5.12"
+        fill="#b82814" />
+      <rect class="ketchup__drip" data-name="ketchup__drip" x="345.8" y="71.04" width="10.23" height="15.05" rx="5.12"
+        fill="#b82814" />
+    </g>
+    <g class="lettuce">
+      <path class="lettuce__pieces"
+        d="M366.46 67.03h-359a7.79 7.79 0 000 15.56h45.62a7.4 7.4 0 006.73 4.5h79.82a7.42 7.42 0 006.73-4.5h15.74a7.4 7.4 0 006.73 4.5h48.57a7.42 7.42 0 006.74-4.5h15.73a7.42 7.42 0 006.73 4.5h92.71a7.4 7.4 0 006.73-4.5h20.45a7.79 7.79 0 000-15.56z"
+        fill="#3baa37" />
+    </g>
+    <g class="bun">
+      <path class="bun-top" d="M357.48 67.03c-3.46-37.24-77.53-67-168.42-67s-165 29.75-168.42 67z" fill="#fdd292" />
+      <path class="bun-bottom"
+        d="M20.65 123.31h336.83v29.86a10.71 10.71 0 01-10.71 10.71H31.36a10.71 10.71 0 01-10.71-10.71v-29.86z"
+        fill="#fdd292" />
+    </g>
+    <g class="seed">
+      <ellipse class="seed" data-name="seed" cx="73.7" cy="37.83" rx="6.08" ry="4.34" fill="#ede7cb" />
+      <ellipse class="seed" data-name="seed" cx="102.9" cy="52.85" rx="6.08" ry="4.34" fill="#ede7cb" />
+      <ellipse class="seed" data-name="seed" cx="123.86" cy="27.74" rx="5.79" ry="4.34" fill="#ede7cb" />
+      <ellipse class="seed" data-name="seed" cx="152.44" cy="44.18" rx="5.79" ry="4.34" fill="#ede7cb" />
+      <ellipse class="seed" data-name="seed" cx="187.1" cy="20.49" rx="5.79" ry="4.34" fill="#ede7cb" />
+      <ellipse class="seed" data-name="seed" cx="220.59" cy="48.52" rx="5.79" ry="4.34" fill="#ede7cb" />
+      <ellipse class="seed" data-name="seed" cx="240.48" cy="27.74" rx="5.79" ry="4.34" fill="#ede7cb" />
+      <ellipse class="seed" data-name="seed" cx="173.29" cy="39.85" rx="5.79" ry="4.34" fill="#ede7cb" />
+      <ellipse class="seed" data-name="seed" cx="259.01" cy="33.49" rx="5.79" ry="4.34" fill="#ede7cb" />
+      <ellipse class="seed" data-name="seed" cx="54.14" cy="56.64" rx="6.08" ry="4.34" fill="#ede7cb" />
+      <ellipse class="seed" data-name="seed" cx="192.6" cy="52.85" rx="5.79" ry="4.34" fill="#ede7cb" />
+      <ellipse class="seed" data-name="seed" cx="273.3" cy="46.5" rx="5.79" ry="4.34" fill="#ede7cb" />
+      <ellipse class="seed" data-name="seed" cx="327.14" cy="52.85" rx="5.79" ry="4.34" fill="#ede7cb" />
+      <ellipse class="seed" data-name="seed" cx="298.02" cy="33.49" rx="5.79" ry="4.34" fill="#ede7cb" />
+    </g>
+  </svg>
+  <div class="toppings">
+    <h1> what topics do you want?</h1>
+    <div class="btn-group" style="margin-left:30px;">
+      <button id="seeds">Seeds</button>
+      <button id="lettuce">Lettuce</button>
+      <button id="ketchup">Ketchup</button>
+      <button id="cheese">Cheese</button>
+    </div>
+  </div>
+  <script>
+
+    const toppingsButtons = document.querySelector(".toppings");
+    const seedButton = document.querySelector("#seeds");
+    const lettuceButton = document.querySelector("#lettuce");
+    const ketchupButton = document.querySelector("#ketchup");
+    const cheeseButton = document.querySelector("#cheese");
+
+   const seeds=document.querySelector(".seed");
+   const lettuce=document.querySelector(".lettuce");
+   const ketchup=document.querySelector(".ketchup");
+   const cheese=document.querySelector(".cheese");
+
+  
+
+   ketchupButton.addEventListener("click", e=>{
+    ketchup.classList.toggle("removed");
+   });
+
+   cheeseButton.addEventListener("click", e=>{
+    cheese.classList.toggle("removed");
+   });
+
+   seedButton.addEventListener("click", e=>{
+    seeds.classList.toggle("removed");
+   });
+
+   lettuceButton.addEventListener("click", e=>{
+    lettuce.classList.toggle("removed");
+   });
+
+  </script>
+
+</body>
+
+</html>

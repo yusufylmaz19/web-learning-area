@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *,
+    *::after,
+    *::before {
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      flex-direction: column;
+    }
+
+    button {
+      margin: 1rem;
+    }
+
+    .btn {
+      --background-color: #e3e3e3;
+      --border-size: 2px;
+      --accent-color: #0EF;
+
+      outline: none;
+      border: none;
+      background-color: var(--background-color);
+      padding: .5rem 1rem;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .btn-border-pop::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      border: var(--border-size) solid var(--background-color);
+      transition: top, left, right, bottom, 100ms ease-in-out;
+    }
+
+    .btn-border-pop:hover::before,
+    .btn-border-pop:focus::before {
+      top: calc(var(--border-size) * -2);
+      left: calc(var(--border-size) * -2);
+      right: calc(var(--border-size) * -2);
+      bottom: calc(var(--border-size) * -2);
+    }
+
+    .btn-background-slide::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--accent-color);
+      z-index: -1;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 300ms ease-in-out;
+    }
+
+    .btn-background-slide {
+      z-index: 1;
+      transition: color 350ms ease-in-out;
+    }
+
+    .btn-background-slide:hover,
+    .btn-background-slide:focus {
+      color: white;
+    }
+
+
+    .btn-background-slide:hover::before,
+    .btn-background-slide:focus::before {
+      transform: scaleX(1);
+    }
+
+
+    .btn-background-circle::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--background-color);
+      z-index: -1;
+      border-radius: 50%;
+      transform: scale(1.5);
+      transition: transform 500ms ease-in-out;
+    }
+
+    .btn-background-circle {
+      z-index: 1;
+      overflow: hidden;
+      background-color: var(--accent-color);
+      transition: color 500ms ease-in-out;
+    }
+
+    .btn-background-circle:focus,
+    .btn-background-circle:hover {
+      color: white;
+    }
+
+    .btn-background-circle:hover::before,
+    .btn-background-circle:focus::before {
+      transform: scale(0);
+    }
+
+    .btn-border-underline::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      min-height: var(--border-size);
+      background-color: var(--accent-color);
+      transition:  transform 300ms ease-in-out;
+      transform: scale(0);
+    }
+
+    .btn-border-underline:hover::before,
+    .btn-border-underline:focus::before {
+      transform: scale(1);
+    }
+
+
+  </style>
+
+</head>
+
+<body>
+  <button class="btn btn-border-pop">Border Pop</button>
+  <button class="btn btn-background-slide">Background Slide</button>
+  <button class="btn btn-background-circle">Background Circle</button>
+  <button class="btn btn-border-underline">Border Underline</button>
+</body>
+
+</html>

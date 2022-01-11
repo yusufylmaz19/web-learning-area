@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>me</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      background-color: hsl(200, 50%, 12%);
+    }
+
+    .head {
+      background: hsl(19, 76%, 88%);
+      width: 300px;
+      height: 340px;
+      border-radius: 70% 70% 100% 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .eyes,
+    .brows {
+      position: absolute;
+      width: 195px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .eye {
+      background-color: white;
+      height: 40px;
+      width: 65px;
+      border-radius: 100%;
+      border-top: 3px solid hsl(19, 46%, 68%);
+      border-bottom: 3px solid hsl(19, 46%, 68%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .eye::before {
+      content: '';
+      position: absolute;
+      width: 41px;
+      height: 41px;
+      background-color: sienna;
+      border-radius: 100%;
+      margin-left: 10px;
+      margin-bottom: 5px;
+    }
+
+    .eye::after {
+      content: '';
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background-color: #333;
+      border-radius: 100%;
+      margin-left: 15px;
+      margin-bottom: 7px;
+    }
+
+    .brow {
+      width: 65px;
+      height: 32px;
+      border-top: 10px solid hsl(27, 33%, 28%);
+      border-radius: 100%;
+      margin-bottom: 35px;
+    }
+
+    .nose {
+      position: absolute;
+      width: 40px;
+      height: 30px;
+      border: 4px solid hsl(19, 46%, 68%);
+      border-top: none;
+      border-radius: 0 0 50% 50%;
+      margin-top: 100px;
+    }
+
+    .mouth {
+      position: absolute;
+      width: 100px;
+      height: 40px;
+      background-color: white;
+      border: 4px solid hsl(19, 46%, 68%);
+      border-left-width: 1px;
+      border-right-width: 1px;
+      border-right-width: 2px;
+      margin-top: 225px;
+      border-radius: 20% 20% 100% 100%;
+    }
+
+    .ears {
+      z-index: -1;
+      position: absolute;
+      width: 340px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .ear {
+      width: 25px;
+      height: 70px;
+      border: 2px solid hsl(19, 46%, 68%);
+      border-radius: 0 100% 100% 0;
+      background-color: hsl(19, 76%, 85%);
+    }
+
+    .ear:first-child {
+      border-radius: 100% 0 0 100%;
+    }
+
+    .hair {
+      position: absolute;
+      background-color: hsl(27, 33%, 28%);
+      width: 300px;
+      height: 125px;
+      margin-bottom: 300px;
+      border-radius: 50% 100% 0 0;
+    }
+
+    .hair::after,
+    .hair::before {
+      position: absolute;
+      content: '';
+      width: 10px;
+      height: 100px;
+      background-color: hsl(27, 33%, 28%);
+      transform: translateY(100%);
+    }
+
+    .hair::after {
+      right: 0;
+    }
+
+    .hair-corner {
+      position: absolute;
+      width: 100%;
+    }
+
+    .hair-corner::before,
+    .hair-corner::after {
+      position: absolute;
+      content: '';
+      width: 14px;
+      height: 20px;
+      background-color:hsl(27, 33%, 28%);
+      transform: rotate(45deg);
+      top: 115px;
+      left: 5px;
+    }
+
+    .hair-corner::after{
+      position: absolute;
+      left: initial;
+      right: 5px;
+      transform: rotate(-45deg);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="head">
+    <div class="hair">
+      <div class="hair-corner"></div>
+    </div>
+    <div class="brows">
+      <div class="brow"></div>
+      <div class="brow"></div>
+    </div>
+    <div class="eyes">
+      <div class="eye"></div>
+      <div class="eye"></div>
+    </div>
+    <div class="nose"></div>
+    <div class="mouth"></div>
+    <div class="ears">
+      <div class="ear"></div>
+      <div class="ear"></div>
+    </div>
+  </div>
+</body>
+
+</html>

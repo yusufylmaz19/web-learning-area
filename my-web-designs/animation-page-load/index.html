@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    body {
+      margin: 0;
+      --nav-load-time:300ms;
+      --nav-link-load-time:500ms;
+      --article-load-delay: calc(var(--nav-link-load-time) + var(--nav-load-time));
+    }
+    
+    nav{
+      color: white;
+      background-color: rgb(0, 61, 92);
+      animation: nav-load var(--nav-load-time) ease-in ;
+    
+    }
+
+    nav ul {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav li{
+      list-style: none;
+      padding: 10px;
+      margin: 0 10px;
+      animation-name: nav-link-load;
+      animation-duration: var(--nav-link-load-time);
+      animation-timing-function: ease-in;
+      animation-delay:var(--nav-load-time);
+      animation-fill-mode: forwards;
+      transform: scale(0);
+    }
+
+    nav li:first-child{
+    animation-name: nav-first-link-load;
+    transform: translateX(-1000%);
+    }
+    nav li:last-child{
+      animation-name: nav-last-link-load;
+      transform: translateX(1000%);
+   }
+
+    nav li:hover{
+background-color: rgba(118, 131, 138, 0.5);
+    }
+
+    nav a{
+      color: inherit;
+      text-decoration: none;
+    }
+
+    main{
+      padding: 30px;
+    }
+    
+    h1{
+      animation: article-load 300ms ease-in var(--article-load-delay);
+      animation-fill-mode: forwards;
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+
+    p{
+      animation: article-load 300ms ease-in calc(var(--article-load-delay) + 200ms);
+      animation-fill-mode: forwards;
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+
+    /* animation nav load */
+  @keyframes nav-load {
+     0%{
+      transform: translateY(-100%);
+     }
+
+     100%{
+      transform: translateY(0%);
+     }
+  }
+ /* animation nav link load */
+  @keyframes nav-link-load {
+     0%{
+      transform: scale(0);
+     }
+ 
+    90%{
+      transform: scale(1.1);
+    }
+
+     100%{
+      transform: scale(1);
+     }
+  }
+ /* animation nav first link load */
+  @keyframes nav-first-link-load {
+     0%{
+      transform: translateX(-1000%);
+     }
+ 
+    90%{
+      transform: translateX(50%);
+    }
+
+     100%{
+      transform: translateX(0);
+     }
+  }
+     
+   /* animation nav last link load */
+   @keyframes nav-last-link-load {
+    0%{
+      transform: translateX(1000%);
+     }
+ 
+    90%{
+      transform: translateX(-50%);
+    }
+
+     100%{
+      transform: translateX(0);
+     }
+  }
+
+  @keyframes article-load {
+    0%{
+       transform: translateY(-20px);
+       opacity: 0;
+    }
+
+    100%{
+      transform: translateY(0);
+       opacity: 1;
+    }
+  }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#" class="link">Home</a></li>
+        <li><a href="#" class="link">About</a></li>
+        <li><a href="#" class="link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+   <main>
+     <section>
+       <article>
+         <h1> Main Story</h1>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate et alias fuga esse officiis sed similique rerum! Temporibus aliquid aut sed nulla repellendus id nihil eum? Dolore minima quis consectetur saepe id laudantium repudiandae? Cupiditate, explicabo unde. Excepturi impedit eligendi deleniti, nemo recusandae earum labore, quae, iusto doloremque natus maiores.</p>
+       </article>
+       <article>
+         <h1>Another Story</h1>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, dolor harum, nesciunt aliquam cum architecto porro odio tenetur, distinctio possimus vel rerum cupiditate. Atque, sed!</p>
+       </article>
+     </section>
+   </main>
+</body>
+
+</html>

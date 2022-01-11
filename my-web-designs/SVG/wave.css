@@ -1,0 +1,52 @@
+img {
+  width: 300px;
+  height: 350px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-dark: rgb(13, 17, 19);
+  --clr-light: #fff;
+  --clr-accent: rgb(222, 52, 0);
+  --clr-accent-dark: rgb(163, 38, 0);
+  --clr-secondary: rgb(0, 176, 199);
+
+  --br: 0.5em;
+
+  --transition: transform 200ms cubic-bezier();
+}
+
+body {
+  font-family: sans-serif;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: var(--clr-dark);
+  color: var(--clr-light);
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.wave {
+  position: absolute;
+  top: 5em;
+  left: 0;
+  width: 200%;
+  animation: wave linear 3s infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

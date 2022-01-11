@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation</title>
+</head>
+
+<style>
+  .hamburger{
+    width: 100vw;
+    height: 40vw;
+  fill:"none";
+  }
+/*  
+  .hamburger:hover .line-one,  
+  .hamburger:hover .line-two,
+  .hamburger:hover .line-three{
+    animation: line-grow ease-out 500ms;
+    transform-origin: 50% 50%;
+}
+
+.hamburger:hover .line-two{
+  animation-delay: 75ms;
+}
+.hamburger:hover .line-three{
+  animation-delay: 150ms;
+}
+
+ 
+ @keyframes line-grow {
+  0% { transform: scaleX(1)}
+  50% { transform: scaleX(1.5)}
+  100% { transform: scaleX(1)}
+ } */
+
+
+</style>
+
+<body>
+  
+  <svg class="hamburger"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+ <line class="line-one" x1="25" y1="42" x2="75" y2="42" fill="none" stroke="black" stroke-miterlimit="10" stroke-width="4"/>
+ <line class="line-two" x1="25" y1="50" x2="75" y2="50" fill="none" stroke="black" stroke-miterlimit="10" stroke-width="4"/>
+ <line class="line-three" x1="25" y1="58" x2="75" y2="58" fill="none" stroke="black" stroke-miterlimit="10" stroke-width="4" />
+
+  </svg>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+  <script src="hamburger.js"></script>
+</body>
+</html>
