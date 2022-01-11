@@ -1,0 +1,7 @@
+{
+  "employees":[
+    {"firstName":"gülnaz","lastname":"yılmaz","age":20,"retired":false},
+    {"firstName":"hanife","lastname":"emirkulu","age":15,"retired":false},
+    {"firstName":"irem","lastname":"bayramoğlu","age":47,"retired":true}
+  ]
+}

@@ -1,0 +1,58 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    height: 1000px;
+    margin: 80px;
+}
+
+
+/* xl */
+
+@media (max-width: 1024px) {
+    /* lg */
+}
+
+@media (max-width: 768px) {
+    /* md */
+}
+
+@media (max-width: 667px) {
+    /* sm */
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box-wrap {
+    margin: 40px;
+}
+
+.p {
+    width: 50px;
+    height: 50px;
+    background: url('pp/IMG_20210402_150509.jpg');
+    background-size: 50px 50px;
+    background-position: center center;
+    border-radius: 70%;
+}
+
+.pp {
+    width: 50px;
+    height: 50px;
+    background: url('pp/IMG_20210402_133105.jpg');
+    background-size: 50px 50px;
+    background-position: center center;
+    border-radius: 50%;
+}
+
+.ppp {
+    width: 50px;
+    height: 50px;
+    background: url('pp/IMG_20210402_133355.jpg');
+    background-size: 50px 50px;
+    background-position: center center;
+    border-radius: 70%;
+}
